@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Properties
 {
-    internal class Class1
+    internal class MyClass
     {
     }
 }

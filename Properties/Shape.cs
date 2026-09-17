@@ -32,7 +32,7 @@ namespace Properties
         public double Perimeter() { return 2*Math.PI*Radius; }
 
     }
-    //good daY MATE
+    //Gooday Mate
     public class Rectangle
     {
         private double length;
