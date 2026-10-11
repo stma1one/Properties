@@ -10,6 +10,20 @@
             Square sq2 = new Square(6);
             Circle cir = new Circle(4);
             Shape[] shapes = new Shape[4] { rec, sq1, sq2, cir };
+            foreach (Shape s in shapes)
+            {
+                if (s != null)
+                {
+                    Console.WriteLine($"Name: {s.Name}");
+                    Console.WriteLine($"Area: {s.Area()}");
+                }
+                if(s is Circle)
+                {
+                   Console.WriteLine($"Radius: {((Circle)s).Radius}");
+                }
+                
+            }
+
 
 
 
