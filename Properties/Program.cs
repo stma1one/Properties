@@ -4,26 +4,34 @@
     {
         static void Main(string[] args)
         {
-            //עבודבה מהווב
+            //jjj
+            
             Rectangle rec = new Rectangle(4, 5);
-            Square sq1 = new Square(4);
-            Square sq2 = new Square(6);
-            Circle cir = new Circle(4);
-            Shape[] shapes = new Shape[4] { rec, sq1, sq2, cir };
-            foreach (Shape s in shapes)
+            Square sq = new Square(4);
+            //Console.WriteLine( sq.Area());
+           // Console.WriteLine(sq.Name);
+          //  Console.WriteLine(rec.Name);
+
+            Shape[] shapes = new Shape[4];
+            shapes[0] = rec;
+            shapes[1] = sq;
+            shapes[2] = new Circle(5);
+
+            foreach(Shape s in shapes)
             {
                 if (s != null)
                 {
-                    Console.WriteLine($"Name: {s.Name}");
-                    Console.WriteLine($"Area: {s.Area()}");
+                    Console.WriteLine(s.Name);
+                    Console.WriteLine(s.Area());    
+                    //if(s is Circle)
+                    //{
+                        //Console.WriteLine(((Circle)s).Radius );
+                    //}
+                    Circle c= s as Circle;
+                    if(c != null)
+                        Console.WriteLine( c.Radius );
                 }
-                if(s is Circle)
-                {
-                   Console.WriteLine($"Radius: {((Circle)s).Radius}");
-                }
-                
             }
-
 
 
 

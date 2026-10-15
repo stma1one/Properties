@@ -27,13 +27,14 @@ namespace Properties
                 radius = value; }
         }
 
-        public Circle(int r, string shapeName = "Circle"): base(shapeName) { Radius = r; }
-        public override double Area() { return Math.Pow(Radius,2)*Math.PI; }
+        public Circle(int r):base("Circle")
+        { Radius = r; }
+        public  override double Area() { return Math.Pow(Radius,2)*Math.PI; }
         public override double Perimeter() { return 2*Math.PI*Radius; }
 
     }
     //Gooday Mate
-    public class Rectangle: Shape
+    public class Rectangle:Shape
     {
         private double length;
 
@@ -51,14 +52,14 @@ namespace Properties
             set { if(value>0)
                     width = value; }
         }
-        public Rectangle(double length,double width, string shapeName = "Rectangle"):base(shapeName)
+        public Rectangle(double length,double width,string shapeName="Rectangle"):base(shapeName)
         {
             Length=length;
             Width = width;
         }
 
-        public override double Area() { return Length*Width; }
-        public override double Perimeter() { return 2 * Length+Width; }
+        public override  double Area() { return Length*Width; }
+        public override  double Perimeter() { return 2 * Length*Width; }
     }
 
     public class Square : Rectangle
